@@ -1,14 +1,14 @@
-package aes;
-
 import java.util.Scanner;
 
 public class aes {
 
-	static int c = 0, RS = 0;
+	static int RS = 0;
 	static Double AE = 0.0, SD = 0.0;
 
+	// Z 및 등급 산출
 	public static void Calculation() {
 		Scanner sc = new Scanner(System.in);
+		
 		while (true) {
 			Double A = 0.0, Z = 0.0;
 
@@ -45,19 +45,22 @@ public class aes {
 		}
 	}
 
+	// (가고 싶은) 대학교 및 전문대 리스트
 	public static void List() {
 		System.out.printf("○○전문대 ");
 		System.out.printf("●●전문대 ");
 		System.out.printf("◎◎전문대 ");
 		System.out.printf("◇◇과학기술대학교 ");
-		System.out.printf("□□ㅁ대학교 ");
+		System.out.printf("□□□대학교 ");
 		System.out.printf("■■대학교 ");
+		System.out.printf("etc.. ");
 	}
 
 	public static void main(String[] args) {
+		
 		while (true) {
 			List();
-			System.out.println("\n성취평가제 과목의 석차등급 산출방법");
+			System.out.println("\n성취평가제 과목의 석차등급 산출하는 코드");
 			System.out.println(
 					"1 |  3.0 ~ 1.76\n2 |  1.76 ~ 1.23\n3 |  1.23 ~ 0.74\n4 |  0.74 ~ 0.26\n5 |  0.26 ~ -0.26\n6 | -0.26 ~ -0.74\n7 | -0.74 ~ -1.23\n8 | -1.23 ~ -1.76\n9 | -1.76 ~ -3.0");
 			Calculation();
