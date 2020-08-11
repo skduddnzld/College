@@ -10,7 +10,7 @@ public class aes {
 	public static void Calculation() {
 		Scanner sc = new Scanner(System.in);
 		while (true) {
-			Double V = 0.0, Z = 0.0;
+			Double A = 0.0, Z = 0.0;
 
 			System.out.println("\n(Z) = (원점수 - 평균) / 표준편차");
 			System.out.print("원점수 입력: ");
@@ -20,8 +20,8 @@ public class aes {
 			System.out.print("표준편차 입력: ");
 			SD = sc.nextDouble();
 
-			V += (RS - AE) / SD;
-			Z = (double) Math.round(V * 10000) / 10000;
+			A += (RS - AE) / SD;
+			Z = (double) Math.round(A * 10000) / 10000;
 
 			if (Z >= 1.76) {
 				System.out.println("【1등급】 | Z 점수: " + Z);
@@ -45,24 +45,21 @@ public class aes {
 		}
 	}
 
-	public static void Table() {
-		System.out.println("\n등급 | (Z)점수");
-		System.out.println("1 |  3.0 ~ 1.76");
-		System.out.println("2 |  1.76 ~ 1.23");
-		System.out.println("3 |  1.23 ~ 0.74");
-		System.out.println("4 |  0.74 ~ 0.26");
-		System.out.println("5 |  0.26 ~ -0.26");
-		System.out.println("6 | -0.26 ~ -0.74");
-		System.out.println("7 | -0.74 ~ -1.23");
-		System.out.println("8 | -1.23 ~ -1.76");
-		System.out.println("9 | -1.76 ~ -3.0");
+	public static void List() {
+		System.out.printf("○○전문대 ");
+		System.out.printf("●●전문대 ");
+		System.out.printf("◎◎전문대 ");
+		System.out.printf("◇◇과학기술대학교 ");
+		System.out.printf("□□ㅁ대학교 ");
+		System.out.printf("■■대학교 ");
 	}
 
 	public static void main(String[] args) {
 		while (true) {
-			System.out.println("성취평가제 과목의 석차등급 산출방법");
-//			List();
-			Table();
+			List();
+			System.out.println("\n성취평가제 과목의 석차등급 산출방법");
+			System.out.println(
+					"1 |  3.0 ~ 1.76\n2 |  1.76 ~ 1.23\n3 |  1.23 ~ 0.74\n4 |  0.74 ~ 0.26\n5 |  0.26 ~ -0.26\n6 | -0.26 ~ -0.74\n7 | -0.74 ~ -1.23\n8 | -1.23 ~ -1.76\n9 | -1.76 ~ -3.0");
 			Calculation();
 		}
 	}
