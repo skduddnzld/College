@@ -1,6 +1,6 @@
 package aes;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class aes {
 
@@ -12,52 +12,52 @@ public class aes {
 		while (true) {
 			Double A = 0.0, Z = 0.0;
 
-			System.out.println("\n(Z) = (¿øÁ¡¼ö - Æò±Õ) / Ç¥ÁØÆíÂ÷");
-			System.out.print("¿øÁ¡¼ö ÀÔ·Â: ");
+			System.out.println("\n(Z) = (ì›ì ìˆ˜ - í‰ê· ) / í‘œì¤€í¸ì°¨");
+			System.out.print("ì›ì ìˆ˜ ì…ë ¥: ");
 			RS = sc.nextInt();
-			System.out.print("Æò±Õ ÀÔ·Â: ");
+			System.out.print("í‰ê·  ì…ë ¥: ");
 			AE = sc.nextDouble();
-			System.out.print("Ç¥ÁØÆíÂ÷ ÀÔ·Â: ");
+			System.out.print("í‘œì¤€í¸ì°¨ ì…ë ¥: ");
 			SD = sc.nextDouble();
 
 			A += (RS - AE) / SD;
 			Z = (double) Math.round(A * 10000) / 10000;
 
 			if (Z >= 1.76) {
-				System.out.println("¡¼1µî±Ş¡½ | Z Á¡¼ö: " + Z);
+				System.out.println("ã€1ë“±ê¸‰ã€‘ | Z ì ìˆ˜: " + Z);
 			} else if (Z < 1.76 && Z >= 1.23) {
-				System.out.println("¡º2µî±Ş¡» | Z Á¡¼ö: " + Z);
+				System.out.println("ã€2ë“±ê¸‰ã€ | Z ì ìˆ˜: " + Z);
 			} else if (Z < 1.23 && Z >= 0.74) {
-				System.out.println("¡¸3µî±Ş¡¹ | Z Á¡¼ö: " + Z);
+				System.out.println("ã€Œ3ë“±ê¸‰ã€ | Z ì ìˆ˜: " + Z);
 			} else if (Z < 0.74 && Z >= 0.26) {
-				System.out.println("4µî±Ş | Z Á¡¼ö: " + Z);
+				System.out.println("4ë“±ê¸‰ | Z ì ìˆ˜: " + Z);
 			} else if (Z < 0.26 && Z >= -0.26) {
-				System.out.println("5µî±Ş | Z Á¡¼ö: " + Z);
+				System.out.println("5ë“±ê¸‰ | Z ì ìˆ˜: " + Z);
 			} else if (Z < -0.26 && Z >= -0.74) {
-				System.out.println("6µî±Ş | Z Á¡¼ö: " + Z);
+				System.out.println("6ë“±ê¸‰ | Z ì ìˆ˜: " + Z);
 			} else if (Z < -0.74 && Z >= -1.23) {
-				System.out.println("7µî±Ş | Z Á¡¼ö: " + Z);
+				System.out.println("7ë“±ê¸‰ | Z ì ìˆ˜: " + Z);
 			} else if (Z < -1.23 && Z >= -1.76) {
-				System.out.println("8µî±Ş | Z Á¡¼ö: " + Z);
+				System.out.println("8ë“±ê¸‰ | Z ì ìˆ˜: " + Z);
 			} else {
-				System.out.println("9µî±Ş | Z Á¡¼ö: " + Z);
+				System.out.println("9ë“±ê¸‰ | Z ì ìˆ˜: " + Z);
 			}
 		}
 	}
 
 	public static void List() {
-		System.out.printf("¡Û¡ÛÀü¹®´ë ");
-		System.out.printf("¡Ü¡ÜÀü¹®´ë ");
-		System.out.printf("¡İ¡İÀü¹®´ë ");
-		System.out.printf("¡Ş¡Ş°úÇĞ±â¼ú´ëÇĞ±³ ");
-		System.out.printf("¡à¡à¤±´ëÇĞ±³ ");
-		System.out.printf("¡á¡á´ëÇĞ±³ ");
+		System.out.printf("â—‹â—‹ì „ë¬¸ëŒ€ ");
+		System.out.printf("â—â—ì „ë¬¸ëŒ€ ");
+		System.out.printf("â—â—ì „ë¬¸ëŒ€ ");
+		System.out.printf("â—‡â—‡ê³¼í•™ê¸°ìˆ ëŒ€í•™êµ ");
+		System.out.printf("â–¡â–¡ã…ëŒ€í•™êµ ");
+		System.out.printf("â– â– ëŒ€í•™êµ ");
 	}
 
 	public static void main(String[] args) {
 		while (true) {
 			List();
-			System.out.println("\n¼ºÃëÆò°¡Á¦ °ú¸ñÀÇ ¼®Â÷µî±Ş »êÃâ¹æ¹ı");
+			System.out.println("\nì„±ì·¨í‰ê°€ì œ ê³¼ëª©ì˜ ì„ì°¨ë“±ê¸‰ ì‚°ì¶œë°©ë²•");
 			System.out.println(
 					"1 |  3.0 ~ 1.76\n2 |  1.76 ~ 1.23\n3 |  1.23 ~ 0.74\n4 |  0.74 ~ 0.26\n5 |  0.26 ~ -0.26\n6 | -0.26 ~ -0.74\n7 | -0.74 ~ -1.23\n8 | -1.23 ~ -1.76\n9 | -1.76 ~ -3.0");
 			Calculation();
